@@ -37,4 +37,4 @@ SELECT AVG(Price) AS AveragePrice FROM products;
 SELECT * FROM employees WHERE MiddleInitial IS NULL AND Title LIKE '%Geek Squad%';
 
 -- find all products from the products table whose stock level is in the range -- of 500 to 1200. Order by Price from least to greatest. Hint: Use the between keyword
-SELECT * FROM products WHERE StockLevel BETWEEN 500 and 1200;
+SELECT * FROM products WHERE StockLevel BETWEEN 500 and 1200 ORDER BY Price, CAST(StockLevel AS UNSIGNED) ASC;
